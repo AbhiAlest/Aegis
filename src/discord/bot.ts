@@ -1,17 +1,19 @@
-import { Client, Message } from 'discord.js';
+import { Message } from 'discord.js';
+import { detectLanguage, translateMessage } from '../translation/translation';
 
-const client = new Client();
+export async function handleMessage(message: Message) {
+  // Add your bot's logic here
+  if (message.author.bot) return;
 
-const token = 'YOUR_BOT_TOKEN';
+  const detectedLanguage = await detectLanguage(message.content);
+  console.log('Detected Language:', detectedLanguage);
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user?.tag}!`);
-});
-
-client.on('message', (message: Message) => {
-  // Add bot's logic here
-  // moderation tasks and specific commands
-});
-
-client.login(token);
-
+  if (detectedLanguage !== 'en') {
+    const translation = await translateMessage(message.content, 'en');
+    console.log('Translation:', translation);
+    // Handle the translated message
+  } else {
+    console.log('Message is in English:', message.content);
+    // Handle the message directly
+  }
+}
