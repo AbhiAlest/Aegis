@@ -2,15 +2,15 @@
 
 
 <p>
-Aegis/
-├─ src/
-│  ├─ nlp/
-│  │  └─ nlpProcessing.ts
-│  ├─ translation/
-│  │  ├─ translation.ts
-│  ├─ discord/
-│  │  └─ bot.ts
-│  └─ main.ts
-├─ package.json
-└─ tsconfig.json
+Aegis/<br>
+├─ src/<br>
+│  ├─ nlp/<br>
+│  │  └─ nlpProcessing.ts<br>
+│  ├─ translation/<br>
+│  │  ├─ translation.ts<br>
+│  ├─ discord/<br>
+│  │  └─ bot.ts<br>
+│  └─ main.ts<br>
+├─ package.json<br>
+└─ tsconfig.json<br>
 </p>  
