@@ -1,5 +1,6 @@
 import { Message } from 'discord.js';
 import { detectLanguage, translateMessage } from '../translation/translation';
+import { isBypassingFilter } from '../utils/bypassDetection';
 
 export async function handleMessage(message: Message) {
   // Add your bot's logic here
@@ -14,6 +15,12 @@ export async function handleMessage(message: Message) {
     // Handle the translated message
   } else {
     console.log('Message is in English:', message.content);
-    // Handle the message directly
+    if (isBypassingFilter(message.content)) {
+      console.log('Bypass attempt detected');
+      // Handle bypass attempt
+    } else {
+      console.log('Message is not a bypass attempt');
+      // Handle the message directly
+    }
   }
 }
