@@ -13,7 +13,7 @@ Aegis/<br>
 │  │  └─ bot.ts<br>
 │  ├─ utils/<br>
 │  │  |─ bypassDetection.ts<br>
-|  |  └─ moderation.ts
+|  |  └─ moderation.ts<br>
 │  └─ main.ts<br>
 ├─ package.json<br>
 └─ tsconfig.json<br>
