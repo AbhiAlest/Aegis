@@ -11,11 +11,13 @@ Aegis/<br>
 │ │ └─ translation.ts<br>
 │ ├─ discord/<br>
 │ │ └─ bot.ts<br>
-│ ├─ utils/<br>
-│ │ ├─ bypassDetection.ts<br>
-│ │ └─ moderation.ts<br>
+│ ├─ image/<br>
+│ │ └─ imageAnalysis.ts<br>
+│ ├─ audio/<br>
+│ │ └─ audioAnalysis.ts<br>
 │ └─ main.ts<br>
 ├─ package.json<br>
 └─ tsconfig.json<br>
+
 
 </p>  
