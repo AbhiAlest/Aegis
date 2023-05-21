@@ -1,7 +1,6 @@
 <h1 align = "center" >Aegis: Reinventing Discord Moderation</h1>
 <br />
 <p align="center">
-  
 Discover Aegis, the unparalleled open-source Discord bot that transforms community engagement and sets a new standard for moderation. 
   
 Cutting Edge Features:
@@ -11,7 +10,6 @@ Cutting Edge Features:
 * Fortifies and nurtures your Discord community
 * Swiftly detects moderation failures
 * Evolves to counter evasion techniques
-  
   
 Elevate your server's protection with Aegis today.
   
