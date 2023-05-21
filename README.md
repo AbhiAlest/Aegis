@@ -1,4 +1,4 @@
-<h1 align = "center" >Aegis: Reinventing Discord Moderation</h1>
+<h1 align = "center" >Aegis</h1>
 <br />
 <p align="center">
 
