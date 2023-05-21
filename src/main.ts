@@ -1,7 +1,8 @@
 import { Client, GatewayIntentBits, Message } from 'discord.js';
 import { analyzeSentiment, recognizeEntities, classifyText } from './nlp/nlpProcessing';
 import { detectLanguage, translateText } from './translation/translation';
-import { applyModerationRules, loadRules } from './moderation/moderation';
+import { analyzeImage } from './image/imageAnalysis';
+import { analyzeAudio } from './audio/audioAnalysis';
 
 require('dotenv').config();
 
@@ -24,6 +25,45 @@ client.on('messageCreate', async (message: Message) => {
   console.log('Sentiment:', sentiment);
   console.log('Entities:', entities);
   console.log('Classification:', classification);
+
+  // Image Analysis
+  const imageElement = document.getElementById('image');
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(imageElement, 0, 0);
+  const imageData = ctx.getImageData(0, 0, imageElement.width, imageElement.height);
+  
+  analyzeImage(imageData)
+    .then((result) => {
+      console.log('Image Analysis Result:', result);
+      // Handle the image analysis result
+    })
+    .catch((error) => {
+      console.error('Error analyzing image:', error);
+    });
+
+  // Audio Analysis
+  navigator.mediaDevices.getUserMedia({ audio: true })
+    .then((stream) => {
+      const audioContext = new AudioContext();
+      const audioSource = audioContext.createMediaStreamSource(stream);
+      const bufferSize = 2048;
+      const audioAnalyser = audioContext.createAnalyser();
+      audioAnalyser.fftSize = bufferSize;
+      const audioBuffer = new Float32Array(bufferSize);
+
+      audioSource.connect(audioAnalyser);
+
+      setInterval(() => {
+        audioAnalyser.getFloatTimeDomainData(audioBuffer);
+        const analysisResult = analyzeAudio(audioBuffer);
+        console.log('Audio Analysis Result:', analysisResult);
+        // Handle the audio analysis result
+      }, 1000);
+    })
+    .catch((error) => {
+      console.error('Error accessing audio:', error);
+    });
 
   // Moderation
   const rules = loadRules('rules.txt');
