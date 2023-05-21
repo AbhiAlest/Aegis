@@ -1,8 +1,19 @@
 <h1 align = "center" >Aegis: Reinventing Discord Moderation</h1>
 <br />
 <p align="center">
-
-Discover Aegis, the unparalleled open-source Discord bot that transforms community engagement and sets a new standard for moderation. With GPT-3.5's advanced natural language processing, cutting-edge image/audio scanners, and optimized deep learning, Aegis fortifies and nurtures your thriving Discord community. Stay one step ahead with Aegis as it swiftly detects moderation failures and evolves to counter evasion techniques. Elevate your server's protection with Aegis today.
+  
+Discover Aegis, the unparalleled open-source Discord bot that transforms community engagement and sets a new standard for moderation. 
+  
+Cutting Edge Features:
+* GPT-3.5's advanced natural language processing
+* Cutting-edge image/audio scanners
+* Optimized deep learning
+* Fortifies and nurtures your Discord community
+* Swiftly detects moderation failures
+* Evolves to counter evasion techniques
+  
+  
+Elevate your server's protection with Aegis today.
   
 </p>
 <br />
