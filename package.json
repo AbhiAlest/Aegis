@@ -11,7 +11,9 @@
     "dotenv": "^10.0.0",
     "google-translate-api": "^3.0.0",
     "natural": "0.6.3",
-    "@openai/gpt-3.5": "^0.0.1-alpha.3"
+    "@openai/gpt-3.5": "^0.0.1-alpha.3",
+    "@tensorflow/tfjs": "^4.8.0",
+    "fs": "0.0.1-security"
   },
   "devDependencies": {
     "ts-node": "10.2.1",
