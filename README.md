@@ -3,7 +3,7 @@
 <p align="center">
 Discover Aegis, the unparalleled open-source Discord bot that transforms community engagement and sets a new standard for moderation. 
   
-Cutting Edge Features:
+Cutting-Edge Features:
 * GPT-3.5's advanced natural language processing
 * Cutting-edge image/audio scanners
 * Optimized deep learning
@@ -12,7 +12,6 @@ Cutting Edge Features:
 * Evolves to counter evasion techniques
   
 Elevate your server's protection with Aegis today.
-  
 </p>
 <br />
 
@@ -20,6 +19,7 @@ Elevate your server's protection with Aegis today.
 
 <h2>File Structure</h2>
 <p>
+  
 Aegis/<br>
 ├─ src/<br>
 │ ├─ nlp/<br>
@@ -36,6 +36,5 @@ Aegis/<br>
 │ └─ main.ts<br>
 ├─ package.json<br>
 └─ tsconfig.json<br>
-
-
+  
 </p>  
