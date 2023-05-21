@@ -10,7 +10,8 @@
     "discord.js": "^13.2.0",
     "dotenv": "^10.0.0",
     "google-translate-api": "^3.0.0",
-    "natural": "0.6.3"
+    "natural": "0.6.3",
+    "@openai/gpt-3.5": "^0.0.1-alpha.3"
   },
   "devDependencies": {
     "ts-node": "10.2.1",
