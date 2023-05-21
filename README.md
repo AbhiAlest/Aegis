@@ -1,4 +1,4 @@
-<h1>Aegis</h1>
+<h1 align = "center" >Aegis</h1>
 
 <h2>File Structure</h2>
 <p>
