@@ -10,7 +10,7 @@ async function detectLanguage(message: string): Promise<string> {
       googleTranslateEndpoint,
       {
         q: message,
-        key: apiKey,
+        key: apiKey, //prev api inputted
       }
     );
 
