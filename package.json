@@ -1,7 +1,7 @@
 {
   "name": "Aegis",
   "version": "1.0.0",
-  "description": "Aegis is a discord moderation bot that can handle intent, determine if users are bypassing filters, and more.",
+  "description": "Aegis is a discord moderation bot that can handle intent, determine if users are bypassing filters, recognize images/audio content and more.",
   "scripts": {
     "start": "ts-node src/main.ts"
   },
