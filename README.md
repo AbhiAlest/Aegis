@@ -4,7 +4,7 @@
 Discover Aegis, the unparalleled open-source Discord bot that transforms community engagement and sets a new standard for moderation. 
   
 **Cutting-Edge Features**:
-* GPT-3.5's advanced natural language processing
+* GPT-3.5/4's advanced natural language processing
 * Cutting-edge image/audio scanners
 * Hyperoptimized deep learning
 * Fortifies and nurtures your Discord community
