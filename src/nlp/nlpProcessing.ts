@@ -27,7 +27,7 @@ function classifyText(text: string): string {
   return classification;
 }
 
-// add some example data (FIX LATER)
+// add some example data (FIX LATER)  sentiment analysis
 classifier.addDocument('I love this place', 'positive');
 classifier.addDocument('This is terrible', 'negative');
 classifier.train();
