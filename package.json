@@ -13,6 +13,9 @@
     "natural": "0.6.3",
     "@openai/gpt-3.5": "^0.0.1-alpha.3",
     "@tensorflow/tfjs": "^4.8.0",
+    "@tensorflow/tfjs-node": "^4.8.0",
+    "@tensorflow/tfjs-data": "^4.8.0",
+    "@microsoft/customvision-tfjs": "^1.0.0",
     "fs": "0.0.1-security"
   },
   "devDependencies": {
