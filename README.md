@@ -35,10 +35,6 @@ Aegis/<br>
 │ │ └─ audioAnalysis.ts<br>
 │ └─ main.ts<br>
 ├─ package.json<br>
-├─ .github/<br>
-│ ├─ CODEOWNERS/<br>
-├─ Images/<br>
-│ ├─ Logo<br>   
 └─ tsconfig.json<br>
   
 </p>  
