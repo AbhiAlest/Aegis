@@ -41,12 +41,11 @@ function preprocessImage(imageData) {
 // Perform post-processing on the predictions
 function postProcessPredictions(predictions, threshold) {
   try {
-    const filteredPredictions = predictions
-      .map((prediction) => ({
-        class: prediction.className,
-        confidence: prediction.probability,
-      }))
-      .filter((prediction) => prediction.confidence >= threshold);
+    const filteredPredictions = predictions.map((prediction) => {
+      const confidence = prediction.dataSync()[0];
+      const label = prediction.argMax().dataSync()[0];
+      return { label, confidence };
+    }).filter((prediction) => prediction.confidence >= threshold);
     
     // Apply additional logic as per your requirements
     
