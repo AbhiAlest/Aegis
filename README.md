@@ -16,6 +16,11 @@ Elevate your server's protection with Aegis today.
 <br />
 
 ---
+<h2>License</h2>
+
+This project utilizes the [GNU General Public License v3.0](https://github.com/AbhiAlest/Aegis/blob/main/LICENSE).
+
+---
 <h2>Dependencies</h2>
 
 To view dependencies for this project, [click me](https://github.com/AbhiAlest/Aegis/blob/main/package.json).
