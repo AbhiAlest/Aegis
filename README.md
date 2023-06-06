@@ -20,11 +20,7 @@ Elevate your server's protection with Aegis today.
 <h2>File Structure</h2>
 <p>
   
-Aegis/<br>
-├─ .github/<br>
-│ ├─ CODEOWNERS/<br>
-├─ Images/<br>
-│ ├─ Logo<br>    
+Aegis/<br>   
 ├─ src/<br>
 │ ├─ nlp/<br>
 │ │ └─ nlpProcessing.ts<br>
@@ -39,6 +35,10 @@ Aegis/<br>
 │ │ └─ audioAnalysis.ts<br>
 │ └─ main.ts<br>
 ├─ package.json<br>
+├─ .github/<br>
+│ ├─ CODEOWNERS/<br>
+├─ Images/<br>
+│ ├─ Logo<br>   
 └─ tsconfig.json<br>
   
 </p>  
