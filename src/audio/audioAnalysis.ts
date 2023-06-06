@@ -35,25 +35,77 @@ function getFrequencySpectrum(audioAnalyser) {
   return frequencyData;
 }
 
-function findPeaks(spectralData) {
-  // Perform peak detection on the spectral data
-  // Implement your own peak detection algorithm or use existing libraries
-  // Return an array of peak frequencies or other relevant information
-  // Example: return [100, 200, 300];
+function findPeaks(spectralData: Uint8Array, threshold = 0.5, minPeakDistance = 10): number[] {
+  const peaks: number[] = [];
+
+  // Find local maxima that exceed the threshold
+  for (let i = 1; i < spectralData.length - 1; i++) {
+    if (spectralData[i] > spectralData[i - 1] && spectralData[i] > spectralData[i + 1] && spectralData[i] > threshold) {
+      peaks.push(i);
+    }
+  }
+
+  // Filter out peaks that are too close to each other
+  const filteredPeaks: number[] = [];
+  for (let i = 0; i < peaks.length; i++) {
+    const currentPeak = peaks[i];
+    const isFarEnough = filteredPeaks.every((filteredPeak) => Math.abs(currentPeak - filteredPeak) > minPeakDistance);
+    if (isFarEnough) {
+      filteredPeaks.push(currentPeak);
+    }
+  }
+
+  return filteredPeaks;
 }
 
-function calculateTempo(audioData, sampleRate) {
-  // Perform tempo analysis on the audio data
-  // Implement your own tempo analysis algorithm or use existing libraries
-  // Return the estimated tempo value
-  // Example: return 120;
+function calculateTempo(audioData: Float32Array, sampleRate: number): number {
+  const onsetDetectionThreshold = 0.1; // Adjust this threshold to detect onsets
+
+  // Perform onset detection to find the timing of rhythmic events
+  const onsets: number[] = [];
+  for (let i = 1; i < audioData.length; i++) {
+    if (audioData[i] > onsetDetectionThreshold && audioData[i - 1] <= onsetDetectionThreshold) {
+      onsets.push(i);
+    }
+  }
+
+  // Calculate the average time difference between onsets and convert to tempo
+  const timeDifferences = onsets.map((onset, index) => {
+    if (index === 0) {
+      return 0;
+    }
+    return (onset - onsets[index - 1]) / sampleRate;
+  });
+
+  if (timeDifferences.length === 0) {
+    return 0;
+  }
+
+  const averageTimeDifference = timeDifferences.reduce((sum, difference) => sum + difference, 0) / timeDifferences.length;
+  const tempo = 60 / averageTimeDifference;
+
+  return tempo;
 }
 
-function calculateAmplitudeEnvelope(audioData) {
-  // Calculate the amplitude envelope of the audio data
-  // Implement your own amplitude envelope calculation algorithm or use existing libraries
-  // Return an array representing the amplitude envelope
-  // Example: return [0.1, 0.3, 0.5, 0.2, 0.1];
+function calculateAmplitudeEnvelope(audioData: Float32Array): number[] {
+  const envelope: number[] = [];
+  let maxAmplitude = -Infinity;
+
+  // Calculate the instantaneous amplitude for each sample
+  for (let i = 0; i < audioData.length; i++) {
+    const amplitude = Math.abs(audioData[i]);
+    envelope.push(amplitude);
+
+    if (amplitude > maxAmplitude) {
+      maxAmplitude = amplitude;
+    }
+  }
+
+  // Normalize the envelope to the range [0, 1]
+  const normalizedEnvelope = envelope.map((amplitude) => amplitude / maxAmplitude);
+
+  return normalizedEnvelope;
 }
 
-export { analyzeAudio };
+export { analyzeAudio, findPeaks, calculateTempo, calculateAmplitudeEnvelope };
+
