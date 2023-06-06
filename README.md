@@ -44,6 +44,6 @@ Aegis/<br>
 
 <div align="center">
   <p> 
-    <img src="https://github.com/AbhiAlest/Aegis/blob/main/Aegis.png?raw=true" alt = "Aegis Logo" >
+    <img src="https://github.com/AbhiAlest/Aegis/blob/main/Images/Logo/Aegis.png?raw=true" alt = "Aegis Logo" >
 </p> 
 
