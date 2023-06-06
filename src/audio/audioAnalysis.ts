@@ -1,5 +1,7 @@
 function analyzeAudio(audioData) {
-  // Perform analysis on the audio data using Web Audio API //https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API
+  // Perform analysis on the audio data using Web Audio API 
+  // View additional documentation at 
+  // https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API
   const audioContext = new AudioContext();
   const audioSource = audioContext.createBufferSource();
   audioSource.buffer = createAudioBuffer(audioData, audioContext.sampleRate);
