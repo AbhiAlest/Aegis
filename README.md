@@ -21,6 +21,10 @@ Elevate your server's protection with Aegis today.
 <p>
   
 Aegis/<br>
+├─ .github/<br>
+│ ├─ CODEOWNERS/<br>
+├─ Images/<br>
+│ ├─ Logo<br>    
 ├─ src/<br>
 │ ├─ nlp/<br>
 │ │ └─ nlpProcessing.ts<br>
