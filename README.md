@@ -16,6 +16,12 @@ Elevate your server's protection with Aegis today.
 <br />
 
 ---
+<h2>Dependencies</h2>
+
+To view dependencies for this project, [click me](https://github.com/AbhiAlest/Aegis/blob/main/package.json).
+
+
+---
 
 <h2>File Structure</h2>
 <p>
